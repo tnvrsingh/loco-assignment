@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loco
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: loco
+  template:
+    metadata:
+      labels:
+        app: loco
+    spec:
+      containers:
+        - name: loco
+          image: loco:v2
+          imagePullPolicy: Never
+          resources:
+            requests:
+              cpu: 100m
+            limits:
+              cpu: 500m
+
