@@ -27,7 +27,7 @@ I've supplied `benchmark.sh` to quickly run this command.
 
 1. Make sure the prerequisites are met
 2. Depending on your system, you may have to add the `minikube ip` or `127.0.0.1` with `loco.private.xyz` to the `/etc/hosts` . This demo should run fine on Linux but may run into an issue like I did on MacOS for which I've supplied solutions.
-3. Run the `install.sh`
+3. Run the `install.sh`. This builds the image with the Minikube docker and then installs the required K8s components required to run the application.
 4. Run `benchmark.sh` to scale the HPA.
 
 #### Things to watch out for
